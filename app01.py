@@ -7,8 +7,8 @@ def create_fine_tuning_dataset(article, progress_bar, status_text, text_area):
     client = OpenAI(api_key=st.session_state.api_key)
     
     prompt = f"""以下の条文を元に、LLMファインチューニング用のデータセット(Q&A)を、
-    指定したフォーマットで15個、**JSON全体を1行で**生成してください。出力は必ず日本語でお願いします。
-    Anserは、1200から1500文字を目安にしてください。
+    指定したフォーマットで10個、**JSON全体を1行で**生成してください。出力は必ず日本語でお願いします。
+    Anserは、1200文字を目安にしてください。
 
     条文:
     {article}
